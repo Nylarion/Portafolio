@@ -2,7 +2,9 @@
 
 Este es el portafolio que estuve desarrollando para el ramo de **Desarrollo y Diseño Web + IA**. 
 
-📝 El objetivo principal del desarrollo de este portafolio fue el aprendizaje de **Bootstrap** como también el uso de la **Inteligencia Artificial** de forma constante para aprender a trabajar con ella. Además, todo su desarrollo fue enfocado en que el portafolio sea de código y muy adaptable, cosa que alguién mas pueda tomarlo y usarlo o modificarlo a su gusto.
+## 📝 Objetivo
+
+El objetivo principal del desarrollo de este portafolio fue el aprendizaje de **Bootstrap** como también el uso de la **Inteligencia Artificial** de forma constante para aprender a trabajar con ella. Además, todo su desarrollo fue enfocado en que el portafolio sea de código y muy adaptable, cosa que alguién mas pueda tomarlo y usarlo o modificarlo a su gusto.
 
 ---
 ## 💻 Tecnologías y Herramientas
@@ -35,8 +37,8 @@ En este espacio se consolidan diversos proyectos que exploran:
 
 ## 🔗 Links:
 
-** Página completa en producción: **  https://teclab.uct.cl/~lcerda2023/
-** WireFrame con el diseño original de la página: ** https://nap-posts-81610830.figma.site/
+**Página completa en producción:**  https://teclab.uct.cl/~lcerda2023/
+**WireFrame con el diseño original de la página:** https://nap-posts-81610830.figma.site/
 
 Este repositorio refleja el desarrollo de un proyecto que se basó en un gusto personal por la estetica de Linux, en específico su escritorio Hyprland, dandole una estetica más tranquila y minimalista teniendo animaciones suaves, pero sin dejar de ser intuitivo de usar.
 
