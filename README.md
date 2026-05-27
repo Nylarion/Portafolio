@@ -42,6 +42,15 @@ En este espacio se consolidan diversos proyectos que exploran:
 
 ## Imagenes de referencia del Wireframe y el Portafolio Final
 
+Wireframe (Imagen 1):
+<img width="1880" height="595" alt="Captura de pantalla 2026-05-27 015944" src="https://github.com/user-attachments/assets/9b9ffa1e-b6df-4479-ab6c-1ff52d016f39" />
+Wireframe (Imagen 2):
+<img width="1878" height="814" alt="Captura de pantalla 2026-05-27 020007" src="https://github.com/user-attachments/assets/4da0e88d-d9fb-4638-bca7-a7015ca605ae" />
+Wireframe (Imagen 3):
+<img width="1881" height="849" alt="Captura de pantalla 2026-05-27 020021" src="https://github.com/user-attachments/assets/d8d26796-2218-486b-9b4a-1eca92b31d67" />
+
+---
+
 Portafolio Final (Imagen 1):
 <img width="1887" height="643" alt="Captura de pantalla 2026-05-27 015619" src="https://github.com/user-attachments/assets/36fe72d7-146a-4eef-b474-ba1eb1e5d112" />
 
