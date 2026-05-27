@@ -40,6 +40,18 @@ En este espacio se consolidan diversos proyectos que exploran:
 - **Página completa en producción:**  https://teclab.uct.cl/~lcerda2023/
 - **WireFrame con el diseño original de la página:** https://nap-posts-81610830.figma.site/
 
+## Imagenes de referencia del Wireframe y el Portafolio Final
+
+Portafolio Final (Imagen 1):
+<img width="1887" height="643" alt="Captura de pantalla 2026-05-27 015619" src="https://github.com/user-attachments/assets/36fe72d7-146a-4eef-b474-ba1eb1e5d112" />
+
+Portafolio Final (Imagen 2):
+<img width="1880" height="822" alt="Captura de pantalla 2026-05-27 015641" src="https://github.com/user-attachments/assets/79fdbc03-3966-4ace-80b3-4118b915f187" />
+
+Portafolio Final (Imagen 3):
+<img width="1883" height="845" alt="Captura de pantalla 2026-05-27 015705" src="https://github.com/user-attachments/assets/ae9623bf-a830-4516-bee2-0a13886f89e4" />
+
+
 Este repositorio refleja el desarrollo de un proyecto que se basó en un gusto personal por la estetica de Linux, en específico su escritorio Hyprland, dandole una estetica más tranquila y minimalista teniendo animaciones suaves, pero sin dejar de ser intuitivo de usar.
 
 Portafolio | Luis Cerda 2026
