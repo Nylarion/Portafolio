@@ -44,21 +44,21 @@ $contactos = $stmtContactos->fetchAll();
 
     <nav class="main-bar navbar navbar-expand-lg navbar-dark fixed-top py-3">
         <div class="container-fluid px-3 px-md-5">
-            <div class="d-flex align-items-center">
-                <div class="circle-icon">
+            <div class="d-flex align-items-center flex-grow-1 overflow-hidden me-2">
+                <div class="circle-icon flex-shrink-0">
                     &lt;/&gt;
                 </div>
-                <a class="name-portfolio navbar-brand ms-3" href="#">Nylarion | Panel De Administración</a>
+                <a class="name-portfolio navbar-brand ms-3 text-truncate" href="#">Nylarion | Panel De Administración</a>
             </div>
             
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-controls="mynavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler flex-shrink-0" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-controls="mynavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="mynavbar">
-                <div class="d-flex gap-2 ms-auto central-buttons">
+                <div class="d-flex gap-2 ms-auto central-buttons mt-2 mt-lg-0">
                     <button class="main-btn btn" type="button" onclick="window.location.href='index.php'">Ver Sitio Público</button>
-                    <button class="main-btn btn" type="button" onclick="window.location.href='logout.php'">Cerrar Sesión</button>
+                    <button class="main-btn btn" type="button" onclick="window.location.href='acciones/logout.php'">Cerrar Sesión</button>
                 </div>
             </div>
         </div>
@@ -92,7 +92,7 @@ $contactos = $stmtContactos->fetchAll();
                 <div class="container-fluid pt-4 px-4">
                     <h1 class="title-part">Gestionar Biografía</h1>
                     <div class="general-container border rounded-3 p-4 bg-white shadow-sm my-3">
-                        <form action="acciones/guardar_biografia.php" method="POST" enctype="multipart/form-data" class="js-confirm-form" data-mensaje="¿Seguro que quieres realizar esta acción y actualizar tu biografía?">
+                        <form action="acciones/biografia/guardar_biografia.php" method="POST" enctype="multipart/form-data" class="js-confirm-form" data-mensaje="¿Seguro que quieres realizar esta acción y actualizar tu biografía?">
                             <p class="text-secondary small mb-4">
                                 <i class="fa-solid fa-user-pen me-1"></i> Datos que aparecerán de forma pública:
                             </p>
@@ -131,7 +131,7 @@ $contactos = $stmtContactos->fetchAll();
                 <div class="container-fluid pt-4 px-4">
                     <h1 class="title-part">Gestionar Herramientas</h1>
                     <div class="general-container border rounded-3 p-4 bg-white shadow-sm my-3">
-                        <form action="acciones/guardar_herramientas.php" method="POST" class="text-center js-confirm-form" data-mensaje="¿Seguro que quieres guardar los cambios en las herramientas visibles?">
+                        <form action="acciones/herramienta/guardar_herramientas.php" method="POST" class="text-center js-confirm-form" data-mensaje="¿Seguro que quieres guardar los cambios en las herramientas visibles?">
                             <p class="text-secondary small mb-5">
                                 <i class="fa-solid fa-square-check me-1"></i> Selecciona las casillas de las herramientas que deseas que aparezcan visibles en tu portafolio público:
                             </p>
@@ -180,7 +180,7 @@ $contactos = $stmtContactos->fetchAll();
                         </button>
                     </div>
                     <div class="general-container border rounded-3 p-4 bg-white shadow-sm my-3">
-                        <form action="acciones/guardar_habilidades.php" method="POST" class="js-confirm-form" data-mensaje="¿Seguro que quieres guardar los cambios en los porcentajes de tus habilidades?">
+                        <form action="acciones/habilidad/guardar_habilidades.php" method="POST" class="js-confirm-form" data-mensaje="¿Seguro que quieres guardar los cambios en los porcentajes de tus habilidades?">
                             <p class="text-secondary small mb-4">
                                 <i class="fa-solid fa-sliders me-1"></i> Ajusta el porcentaje de dominio de tus habilidades técnicas existentes:
                             </p>
@@ -192,7 +192,7 @@ $contactos = $stmtContactos->fetchAll();
                                         <div class="col-12 col-md-6">
                                             <div class="p-3 border rounded bg-light position-relative">
                                                 <button type="button" class="btn btn-sm text-danger position-absolute top-0 end-0 m-2 px-1 js-delete-btn" 
-                                                        data-url="acciones/eliminar_habilidad.php?id=<?= $hab['id'] ?>" 
+                                                        data-url="acciones/habilidad/eliminar_habilidad.php?id=<?= $hab['id'] ?>" 
                                                         data-mensaje="¿Seguro que quieres realizar esta acción? La habilidad se eliminará permanentemente."
                                                         title="Eliminar Habilidad">
                                                     <i class="fa-solid fa-trash-can"></i>
@@ -208,7 +208,7 @@ $contactos = $stmtContactos->fetchAll();
                                 <?php endif; ?>
                             </div>
                             <div class="text-end pt-3">
-                                <button type="submit" class="btn btn-dark btn-sm fw-bold px-4 shadow-sm">
+                                <button type="submit" class="btn btn-dark btn-sm fw-bold px-4 shadow-sm" <?= empty($habilidades) ? 'disabled' : '' ?>>
                                     <i class="fa-solid fa-floppy-disk me-1"></i> Guardar Cambios en Porcentajes
                                 </button>
                             </div>
@@ -230,7 +230,7 @@ $contactos = $stmtContactos->fetchAll();
                             <div class="col">
                                 <div class="card h-100 shadow-sm custom-card position-relative">
                                     <button type="button" class="btn btn-sm btn-danger position-absolute top-0 end-0 m-2 shadow js-delete-btn"
-                                            data-url="acciones/eliminar_proyecto.php?id=<?= $proy['id'] ?>"
+                                            data-url="acciones/proyecto/eliminar_proyecto.php?id=<?= $proy['id'] ?>"
                                             data-mensaje="¿Seguro que quieres realizar esta acción? El proyecto se eliminará permanentemente.">
                                         <i class="fa-solid fa-trash-can"></i>
                                     </button>
@@ -258,25 +258,25 @@ $contactos = $stmtContactos->fetchAll();
                         <h1 class="title-part">Gestionar Contactos</h1>
                     </div>
                     <div class="general-container border rounded-3 p-4 bg-white shadow-sm my-3">
-                        <form action="acciones/guardar_habilidades.php" method="POST" class="js-confirm-form" data-mensaje="¿Seguro que quieres guardar los cambios en los porcentajes de tus habilidades?">
+                        <form>
                             <p class="text-secondary small mb-4">
-                                <i class="fa-solid fa-user me-2"></i> Resiva los mensajes que te han llegado:
+                                <i class="fa-solid fa-user me-2"></i> Revisa los mensajes que te han llegado:
                             </p>
                             <div class="row g-4 mb-4">
                                 <?php if (empty($contactos)): ?>
                                     <div class="col-12 text-center text-muted py-3">No hay mensajes disponibles.</div>
                                 <?php else: ?>
                                     <?php foreach ($contactos as $cont): ?>
-                                        <div class="p-5 border rounded bg-light position-relative h-100">
+                                        <div class="p-3 p-sm-5 border rounded bg-light position-relative h-100">
                                             <button type="button" class="btn btn-sm btn-danger position-absolute top-0 end-0 m-2 shadow js-delete-btn"
-                                                    data-url="acciones/eliminar_mensaje.php?id=<?= $cont['id'] ?>"
+                                                    data-url="acciones/contacto/eliminar_mensaje.php?id=<?= $cont['id'] ?>"
                                                     data-mensaje="¿Seguro que quieres realizar esta acción? El mensaje se eliminará permanentemente.">
                                                 <i class="fa-solid fa-trash-can"></i>
                                             </button>
 
                                             <div class="row g-0 align-items-center pe-4 pt-2">
                                                 <div class="col-auto">
-                                                    <div class="border rounded p-2 me-3" style="width: 80px; height: 80px; d-flex; align-items: center; justify-content: center; background-color: black;">
+                                                    <div class="border rounded p-2 me-3" style="width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; background-color: black;">
                                                         <img src="assets/img/user_default.png" class="img-fluid" alt="imagen-contacto" style="max-height: 100%; object-fit: scale-down;">
                                                     </div>
                                                 </div>
@@ -327,7 +327,7 @@ $contactos = $stmtContactos->fetchAll();
                     <h5 class="modal-title fw-bold" id="modalHabilidadLabel"><i class="fa-solid fa-circle-plus me-2"></i>Nueva Habilidad</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="acciones/crear_habilidad.php" method="POST">
+                <form action="acciones/habilidad/crear_habilidad.php" method="POST">
                     <div class="modal-body p-4">
                         <div class="mb-3">
                             <label for="nombre_habilidad" class="form-label fw-bold small">Nombre de la Tecnología / Habilidad</label>
@@ -357,7 +357,7 @@ $contactos = $stmtContactos->fetchAll();
                     <h5 class="modal-title fw-bold" id="modalProyectoLabel"><i class="fa-solid fa-folder-plus me-2"></i>Nuevo Proyecto</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="acciones/crear_proyecto.php" method="POST" enctype="multipart/form-data">
+                <form action="acciones/proyecto/crear_proyecto.php" method="POST" enctype="multipart/form-data">
                     <div class="modal-body p-4">
                         <div class="mb-3">
                             <label for="titulo_proyecto" class="form-label fw-bold small">Título del Proyecto</label>
