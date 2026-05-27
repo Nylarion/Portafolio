@@ -37,8 +37,8 @@ En este espacio se consolidan diversos proyectos que exploran:
 
 ## 🔗 Links:
 
-**Página completa en producción:**  https://teclab.uct.cl/~lcerda2023/
-**WireFrame con el diseño original de la página:** https://nap-posts-81610830.figma.site/
+**- Página completa en producción:**  https://teclab.uct.cl/~lcerda2023/
+**- WireFrame con el diseño original de la página:** https://nap-posts-81610830.figma.site/
 
 Este repositorio refleja el desarrollo de un proyecto que se basó en un gusto personal por la estetica de Linux, en específico su escritorio Hyprland, dandole una estetica más tranquila y minimalista teniendo animaciones suaves, pero sin dejar de ser intuitivo de usar.
 
