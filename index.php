@@ -82,7 +82,7 @@ $proyectos = $stmtProyectos->fetchAll();
                 </ul>
 
                 <div class="d-flex justify-content-center">
-                    <button class="main-btn btn w-100 w-lg-auto" type="button" onclick="window.location.href='login.php'">
+                    <button class="main-btn btn w-100 w-lg-auto" type="button" onclick="window.location.href='acciones/login.php'">
                         <i class="fa-solid fa-terminal me-2"></i>Iniciar Sesión
                     </button>
                 </div>
@@ -200,7 +200,7 @@ $proyectos = $stmtProyectos->fetchAll();
         <h1 id="contacto" class="title-part">Contacto</h1>
         <div class="row justify-content-center py-4">
             <div class="contact-container col-11 col-md-8 col-lg-6 p-4">
-                <form action="acciones/guardar_mensaje.php" method="POST">
+                <form action="acciones/contacto/guardar_mensaje.php" method="POST">
                     <div class="mb-3">
                         <label for="nombre" class="form-label fw-bold text-dark">Nombre</label>
                         <input type="text" class="form-control form-dark-input" id="nombre" placeholder="Tu nombre completo" name="nombre" required>
@@ -227,6 +227,15 @@ $proyectos = $stmtProyectos->fetchAll();
         </div>
 
     </main>
+
+    <footer class="main-footer py-4 mt-5">
+        <div class="container-fluid px-3 px-md-5 d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3">
+            <span class="footer-name">Portafolio © <?= htmlspecialchars($perfil['nombre']) ?></span>
+            <a href="https://github.com/nylarion" target="_blank" class="footer-github-link">
+                <i class="fa-brands fa-github me-2"></i>GitHub
+            </a>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/scripts/script.js"></script>
