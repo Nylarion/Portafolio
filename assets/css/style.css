@@ -1,23 +1,23 @@
 /* ==========================================================================
-   VARIABLES DE ENTORNO HYPRLAND (Paleta Monocromática Rice)
+   VARIABLES DE ENTORNO HYPRLAND
    ========================================================================== */
 :root {
-    --bg-dark: #ffffff;          /* Fondo base del sistema (tu dashboard) */
-    --bg-surface: #f8f9fa;       /* Ventanas inactivas (Cards / Grises muy claros) */
-    --border-inactive: #e0e0e0;  /* Bordes de ventanas sin foco */
+    --bg-dark: #ffffff;
+    --bg-surface: #f8f9fa;
+    --border-inactive: #e0e0e0;
     
-    /* Simula el color de acento de tu Dash, pero integrado al Rice */
-    --border-active: #000000;    /* Color de resplandor en hover */
-    
-    --text-main: #212529;        /* Texto plano oscuro */
-    --text-muted: #6c757d;       /* Comentarios / Subtítulos (Gris) */
 
-    /* Curvas físicas fluidas idénticas al motor de animación de Hyprland */
+    --border-active: #000000;
+    
+    --text-main: #212529;
+    --text-muted: #6c757d
+
+
     --hypr-bezier: cubic-bezier(0.05, 0.9, 0.1, 1.1);
     --hypr-speed: 0.45s;
 }
 
-/* Base general estilo TUI */
+
 * {
     font-family: 'JetBrains Mono', monospace;
     box-sizing: border-box;
@@ -31,18 +31,18 @@ body {
     overflow-x: hidden;
 }
 
-/* Helper de textos secundarios */
+
 .text-muted-custom {
     color: var(--text-muted);
     font-weight: 300;
 }
 
-/* ==========================================================================
-   BARRA DE NAVEGACIÓN (Estilo Waybar / Tu Header Negro)
-   ========================================================================== */
+/* =======================
+   BARRA DE NAVEGACIÓN
+   ======================= */
 .main-bar {
-    background-color: #000000 !important; /* Conservado negro puro */
-    border-bottom: 2px solid #1a1a1a; /* Borde muy sutil para que no sea plano */
+    background-color: #000000 !important;
+    border-bottom: 2px solid #1a1a1a;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
@@ -60,7 +60,7 @@ body {
     color: black;
 }
 
-/* Efecto elástico al pasar el mouse por encima del logo */
+
 .circle-icon:hover {
     transform: rotate(360px) scale(1.1);
 }
@@ -76,7 +76,7 @@ body {
     border-color: #333333;
 }
 
-/* Botones de acción dentro de menús (Ajustado para el Rice) */
+
 .header-links .nav-link {
     color: #b0b0b0 !important;
     transition: color 0.3s ease;
@@ -86,28 +86,28 @@ body {
     color: #ffffff !important;
 }
 
-/* BOTÓN DE INICIO DE SESIÓN CON TERMINAL (Blanco y Negro puro) */
+
 .main-btn {
-    background-color: #ffffff !important; /* Fondo blanco conservado */
-    color: #000000 !important;           /* Texto negro */
-    border: 2px solid #ffffff;           /* Borde blanco */
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: 2px solid #ffffff;
     padding: 7px 20px;
     font-weight: 700;
     transition: all 0.3s var(--hypr-bezier);
 }
 
 .main-btn:hover {
-    background-color: #f0f0f0 !important; /* Gris muy claro en hover */
+    background-color: #f0f0f0 !important;
     border-color: #f0f0f0 !important;
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(255,255,255,0.15); /* Resplandor blanco sutil */
+    box-shadow: 0 4px 10px rgba(255,255,255,0.15);
 }
 
-/* ==========================================================================
-   EFECTO VENTANAS FLOTANTES (Containers, Cards y Form / Estilo Unixporn)
-   ========================================================================== */
+/* ============================
+   EFECTO VENTANAS FLOTANTES
+   ============================*/
 .general-container, .custom-card, .contact-container {
-    background-color: var(--bg-surface) !important; /* Gris claro */
+    background-color: var(--bg-surface) !important; 
     border: 2px solid var(--border-inactive) !important;
     border-radius: 12px !important;
     padding: 24px;
@@ -115,20 +115,19 @@ body {
                 border-color var(--hypr-speed) ease,
                 box-shadow var(--hypr-speed) ease;
     
-    /* Disparador de animación de entrada elástica de ventana */
+
     animation: hypr-window-open var(--hypr-speed) var(--hypr-bezier) backwards;
 }
 
-/* Hover dinámico: Simula el resplandor (Glow) de la ventana activa en Hyprland */
+
 .general-container:hover, .custom-card:hover, .contact-container:hover {
     transform: translateY(-5px) scale(1.01);
-    border-color: var(--border-active) !important; /* Negro */
+    border-color: var(--border-active) !important;
     
-    /* EFECTO GLOW: Resplandor negro/gris difuminado */
+
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); 
 }
 
-/* Busca esta clase y reemplázala por esta versión corregida */
 .user-image {
     width: 120px;
     height: 120px;
@@ -137,11 +136,10 @@ body {
     padding: 3px;
     background-color: #ffffff;
     
-    /* SOLUCIÓN AL COMPRIMIDO: Evita que el contenedor flexible deforme la imagen */
     flex-shrink: 0 !important;
     flex-grow: 0 !important;
 }
-/* Títulos con simulación de Prompt/Cursor bajo parpadeante de Terminal */
+
 .title-part {
     margin: 50px 0 15px 0;
     font-size: calc(1.5rem + 1vw);
@@ -149,7 +147,7 @@ body {
     color: #000000; 
 }
 
-/* Usa la barra baja típica de Alacritty/Kitty */
+
 .title-part::after {
     content: "_";
     font-weight: 300;
@@ -158,16 +156,16 @@ body {
 }
 
 
-/* ==========================================================================
-   BOTONES DE HERRAMIENTAS (Estilo Launcher Rofi / Wofi Monocromo)
-   ========================================================================== */
+/* ==========================
+   BOTONES DE HERRAMIENTAS
+   ========================== */
 .tools-container {
     padding-bottom: 20px;
 }
 
 .tools-button {
-    background-color: #ffffff; /* Fondo blanco */
-    color: #000000;           /* Texto negro */
+    background-color: #ffffff;
+    color: #000000;
     border: 2px solid var(--border-inactive);
     border-radius: 8px;
     padding: 10px 22px;
@@ -177,15 +175,15 @@ body {
 }
 
 .tools-button:hover {
-    background-color: #000000; /* Negro puro */
-    color: #ffffff;           /* Texto blanco */
+    background-color: #000000;
+    color: #ffffff;
     border-color: #000000;
-    transform: scale(1.1) rotate(1deg); /* Física elástica */
+    transform: scale(1.1) rotate(1deg);
 }
 
-/* ==========================================================================
-   PROGRESS BARS (Físicas de Carga en Escala de Grises)
-   ========================================================================== */
+/* =================
+   PROGRESS BAR
+   ================= */
 .progress-container {
     width: 100%;
     height: 12px;
@@ -198,17 +196,17 @@ body {
 
 .progress-bar-custom {
     height: 100%;
-    background: #000000; /* Negro puro */
+    background: #000000;
     border-radius: 20px;
     transform-origin: left;
     
-    /* Animación fluida de carga al renderizar */
+
     animation: hypr-bar-load 1.4s var(--hypr-bezier) forwards;
 }
 
-/* ==========================================================================
-   TARJETAS DE PROYECTOS Y FORMULARIOS (Look Rice)
-   ========================================================================== */
+/* ====================================
+   TARJETAS DE PROYECTOS Y FORMULARIOS
+   ==================================== */
 .card-image-placeholder {
     background-color: #ffffff;
     border: 2px solid var(--border-inactive);
@@ -218,9 +216,9 @@ body {
 }
 
 .custom-btn-github {
-    background-color: #000000 !important; /* Negro */
+    background-color: #000000 !important;
     border: 2px solid #000000 !important;
-    color: #ffffff !important;           /* Blanco */
+    color: #ffffff !important;
     padding: 8px 20px;
     border-radius: 8px;
     width: 100%;
@@ -234,7 +232,7 @@ body {
     border-color: var(--border-inactive) !important;
 }
 
-/* Inputs claros integrados (Look Rice / Monocromo) */
+
 .form-dark-input {
     background-color: #ffffff !important;
     border: 2px solid var(--border-inactive) !important;
@@ -243,14 +241,14 @@ body {
 }
 
 .form-dark-input:focus {
-    border-color: #000000 !important; /* Borde negro en foco */
+    border-color: #000000 !important;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
 }
 
 .btn-hypr-submit {
-    background-color: #000000 !important; /* Negro puro para enviar */
+    background-color: #000000 !important;
     border: none;
-    color: #ffffff !important;           /* Blanco */
+    color: #ffffff !important;
     font-weight: 700;
     border-radius: 8px;
     transition: transform 0.2s var(--hypr-bezier);
@@ -258,14 +256,13 @@ body {
 
 .btn-hypr-submit:hover {
     transform: scale(1.03);
-    background-color: #333333 !important; /* Gris muy oscuro */
+    background-color: #333333 !important;
 }
 
-/* ==========================================================================
+/* ==============================
    ANIMACIONES CORE DE HYPRLAND
-   ========================================================================= */
+   ============================== */
 
-/* Apertura elástica de ventanas/bloques */
 @keyframes hypr-window-open {
     from {
         opacity: 0;
@@ -277,35 +274,34 @@ body {
     }
 }
 
-/* Llenado elástico de barras */
+
 @keyframes hypr-bar-load {
     from { transform: scaleX(0); }
     to { transform: scaleX(1); }
 }
 
-/* Animación ajustada para el parpadeo del guion bajo */
+
 @keyframes hypr-blink-underscore {
     from, to { opacity: 0; }
     50% { opacity: 1; }
 }
 
-/* Escalonamiento elástico por código para las tarjetas del grid */
+
 .row > .col {
     animation: hypr-window-open var(--hypr-speed) var(--hypr-bezier) backwards;
-    /* Calcula automáticamente el delay basándose en el índice inyectado por PHP */
     animation-delay: calc(var(--card-index, 0) * 0.08s);
 }
 
-/* Responsive e inputs */
+
 @media (min-width: 992px) {
     .custom-btn-github { width: auto; }
 }
 
 textarea { resize: none; }
 
-/* ==========================================================================
-   TU LAYOUT SOPORTE PARA EL DASHBOARD INTERNO (SIN TOCAR)
-   ========================================================================== */
+/* ============================================
+   LAYOUT SOPORTE PARA EL DASHBOARD INTERNO
+   ============================================ */
 .dashboard-wrapper {
     margin-top: 82px;
     height: calc(100vh - 82px);
@@ -374,9 +370,9 @@ textarea { resize: none; }
     .content-panel::before { display: none; }
 }
 
-/* ==========================================================================
-   HYPRLAND SPLASH SCREEN LOADER (Totalmente Aislado)
-   ========================================================================== */
+/* ===============================
+   HYPRLAND SPLASH SCREEN LOADER
+   =============================== */
 #hypr-loader {
     position: fixed;
     top: 0;
@@ -480,12 +476,12 @@ body.loader-active {
     pointer-events: none;
 }
 
-/* ==========================================================================
-   FOOTER (Estilo Waybar / Acoplado al Navbar Principal)
-   ========================================================================== */
+/* =======
+   FOOTER
+   ======= */
 .main-footer {
-    background-color: #000000 !important; /* Mismo color negro puro del navbar */
-    border-top: 2px solid #1a1a1a;        /* Borde sutil superior en lugar de inferior */
+    background-color: #000000 !important;
+    border-top: 2px solid #1a1a1a;
     color: #ffffff;
     box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
 }
@@ -507,7 +503,7 @@ body.loader-active {
     transition: all 0.3s var(--hypr-bezier);
 }
 
-/* Efecto elástico sutil estilo Hyprland al pasar el cursor */
+
 .main-footer .footer-github-link:hover {
     color: #000000 !important;
     background-color: #ffffff;
@@ -515,12 +511,11 @@ body.loader-active {
     transform: translateY(-2px);
 }
 
-/* ==========================================================================\
-   CORRECCIONES RESPONSIVAS PARA EL DASHBOARD EN MÓVILES
-   (No altera index.php ni login.php)
-   ========================================================================== */
+/* =======================
+   DASHBOARD EN MÓVILES
+   ======================= */
 @media (max-width: 991.98px) {
-    /* Permitimos que el contenedor principal crezca de forma vertical */
+
     .dashboard-wrapper {
         height: auto !important;
         min-height: calc(100vh - 82px);
@@ -528,29 +523,27 @@ body.loader-active {
         flex-direction: column !important;
     }
 
-    /* Solución al fondo negro: el pseudo-elemento que hace la esquina redondeada 
-       no debe bloquear ni desbordar la pantalla en celulares */
     .content-panel::before {
-        display: none !important; /* Oculta el truco de la esquina en móvil ya que no hay sidebar lateral */
+        display: none !important;
     }
 
-    /* El panel de contenido blanco ahora ocupa todo el ancho y se adapta al scroll */
+
     .content-panel {
         width: 100% !important;
         height: auto !important;
         overflow-y: visible !important;
-        border-radius: 0 !important; /* En celulares es mejor plano para aprovechar el espacio */
-        padding-bottom: 50px; /* Espacio de holgura al final */
+        border-radius: 0 !important;
+        padding-bottom: 50px;
     }
 
-    /* Ajuste fino para que el texto largo del Navbar quepa en pantallas chicas */
+
     .name-portfolio {
         font-size: 14px !important;
         max-width: 190px;
         display: inline-block;
     }
 
-    /* Centra y da una separación limpia a los botones dentro del menú desplegable */
+
     .central-buttons {
         width: 100%;
         text-align: center;
@@ -558,7 +551,7 @@ body.loader-active {
     }
     
     .central-buttons .main-btn {
-        width: 100% !important; /* Que los botones usen el ancho del menú desplegable en móvil */
+        width: 100% !important;
         margin-bottom: 5px;
     }
 }
