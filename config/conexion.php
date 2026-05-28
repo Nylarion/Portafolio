@@ -2,8 +2,8 @@
 
 $host = "localhost";
 $db   = "lcerda_db1"; 
-$user = "lcerda";               
-$pass = "Nhtq.6458";                  
+$user = "root";               
+$pass = "";                  
 $charset = "utf8mb4";
 
 
