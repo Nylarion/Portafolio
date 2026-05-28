@@ -16,11 +16,9 @@
 </head>
 <body class="d-flex align-items-center justify-content-center flex-column" style="height: 100vh; background-color: var(--bg-dark);">
     
-    <!-- CONTENEDOR PRINCIPAL DEL LOGIN -->
     <div class="contact-container p-4" style="width: 380px;">
         <h3 class="text-center mb-4 fw-bold text-dark title-part" style="margin: 10px 0 25px 0; font-size: 1.5rem;">Panel Administrador</h3>
         
-        <!-- ALERTA DE ERROR ESTILO RICE -->
         <?php if (isset($_GET['error']) && $_GET['error'] == 1): ?>
             <div class="mb-3 p-3 text-center" style="background-color: #000000; color: #ffffff; border: 2px solid #333333; border-radius: 8px; font-size: 13px; animation: hypr-window-open 0.3s var(--hypr-bezier);">
                 <i class="fa-solid fa-triangle-exclamation text-white me-2"></i>
