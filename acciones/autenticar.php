@@ -15,7 +15,6 @@ if ($usuario && $pass === $usuario['password']) {
     header('Location: ../dashboard.php');
     exit();
 } else {
-    // Redirige de vuelta al login enviando la señal de error
     header('Location: login.php?error=1');
     exit();
 }
